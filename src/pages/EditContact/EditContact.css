@@ -1,0 +1,82 @@
+/* EditContact.css */
+
+/* Apply a background color to the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e3f0d2; /* Background color */
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #daecf3; /* Form background color */
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Heading text color */
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555; /* Label text color */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #043d2f;
+  }
+  
+  /* Navbar styles (you can adjust these based on your Navbar component) */
+  /* .navbar {
+    background-color: #09131e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar a {
+    left: 10px;
+    color: #723c3c;
+    text-decoration: none;
+    margin: 0 10px;
+  } */
+  
+  /* Add more styles as needed */
+  
