@@ -10,6 +10,8 @@ const Contacts = () => {
   const navigate = useNavigate()
   
   const [contacts, setContacts] = useState([])
+  const [showAllContacts, setShowAllContacts] = useState(false) // using a state hook to set a condition to show limited or all contacts
+  const [searchQuery, setSearchQuery] = useState('')
 
   const fetchContacts = async () => {
     const contactresponse = await axios.get("https://65082c7456db83a34d9bde5d.mockapi.io/contacts")
@@ -19,6 +21,11 @@ const Contacts = () => {
     }
 
   }
+
+  const showAllContactsHandler = () => {
+    setShowAllContacts(true)  // set showallcontacts to true to show all th contacts
+  }
+
   
   
   
@@ -28,9 +35,22 @@ const Contacts = () => {
   return (
     <>
     <Navbar home="All Contacts" addcontact="Add Contact" />
+
+    {/* input for search query */}
+    <div className='search-box'>
+    <input
+      type="text"
+      placeholder="Search contacts..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+    </div>
+    
+
     <div id='allcontacts'>
       {
-        contacts.map((contact) => {
+        contacts.filter((contact) => contact.fullname.toLowerCase().includes(searchQuery.toLowerCase()))
+        .slice(0, showAllContacts ? contacts.length: 6).map((contact) => {
           return (
           <div className="contact-card" key={contact.id}>
           <img src={contact.avatar} alt="Profile Picture" className="contact-avatar"/>
@@ -44,6 +64,10 @@ const Contacts = () => {
         })
     
     }
+    
+    </div>
+    <div className='load-more'>
+    {!showAllContacts && (<Button onClick={showAllContactsHandler} name="Load More"/>)}
     </div>
     </>
   )

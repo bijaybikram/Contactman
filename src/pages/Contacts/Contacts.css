@@ -1,7 +1,39 @@
 /* Reset some default browser styles */
+/* body{
+    display: flex;
+    position: relative;
+} */
+
 body, h1, p, button {
     margin: 0;
     padding: 0;
+}
+
+
+.search-box{
+
+    border-radius: 20px; /* Adjust the value to control the roundness */
+    padding: 10px 30px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    outline: none;
+    background-color: #daecf3;
+    
+    margin: 20px auto;
+    width: 50vw;
+    
+    
+}
+.search-box input{
+    /* width: 50vw; */
+    border-radius: 20px; /* Adjust the value to control the roundness */
+    padding: 10px; /* Add some padding for spacing */
+    border: 1px solid #ccc; /* Add a border for visual separation */
+    outline: none;
+    background-color: #f9f7f8;
+
+    height: 50px;
+    position: relative;
+    left: 2vw;
 }
 
 #allcontacts {
@@ -81,4 +113,13 @@ body, h1, p, button {
 .edit-button:hover,
 .delete-button:hover {
     background-color: #0056b3;
+}
+
+/* style for load more button */
+.load-more {
+    background-color: #333;
+}
+.load-more Button {
+    position: relative;
+    left: 45vw;
 }
