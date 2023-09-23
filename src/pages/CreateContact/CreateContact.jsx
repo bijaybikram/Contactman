@@ -14,7 +14,7 @@ const CreateContact = () => {
   const [email, setEmail] = useState("")
   const [about, setAbout] = useState("")
   
-  const createBlog = async (e) => {
+  const createContact = async (e) => {
 
     e.preventDefault()
     const data = {
@@ -38,7 +38,7 @@ const CreateContact = () => {
       <Navbar/>
       <div className="form-container">
         <h2>Create Contact</h2>
-        <form id="contact-form" onSubmit={createBlog}>
+        <form id="contact-form" onSubmit={createContact}>
 
                 <label htmlFor="name">Name:</label>
                 <input type="text" id="name" name="fullname" placeholder="Provide Name" required onChange={(e) => setFullName(e.target.value)}/>

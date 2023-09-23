@@ -12,7 +12,7 @@ const Navbar = (props) => {
                 <ul className="nav-links">
                     <li><a href="/">{props.home}</a></li>
                     {/* <li><a href="/">{props.contact}</a></li> */}
-                    <li><a href="/createcontact">{props.addcontact}</a></li>
+                    <li><a href="/createcontact/">{props.addcontact}</a></li>
                 </ul>
             
         </nav>
