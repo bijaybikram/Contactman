@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Contacts/>}/>
-        <Route path='/createcontact' element={<CreateContact/>}/>
+        <Route path='/createcontact/' element={<CreateContact/>}/>
         <Route path='/singlecontact/:id' element={<SingleContact/>}/>
         <Route path='/editcontact/:id' element={<EditContact/>}/>
       </Routes>
